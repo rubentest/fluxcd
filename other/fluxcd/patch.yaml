@@ -21,3 +21,5 @@ spec:
             - --git-poll-interval=1m00s
             - --k8s-allow-namespace=dev
             - --sync-garbage-collection
+            #garbagecollection -> recoge la basura ->  https://docs.fluxcd.io/en/1.17.0/references/garbagecollection.html#garbage-collection
+            # allow namespace > namespaces donde actua flux https://docs.fluxcd.io/en/1.17.0/faq.html#can-i-restrict-the-namespaces-that-flux-can-see-or-operate-on
