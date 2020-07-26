@@ -8,7 +8,7 @@ namespace: dev
 bases:
 - ../base/
 - secret_regcred.yaml
-#- deploy_front.yaml
+- deploy_front.yaml
 - deploy_boards.yaml
 - deploy_gateway.yaml
 - deploy_notificator.yaml
