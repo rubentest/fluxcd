@@ -27,11 +27,11 @@ spec:
         terminationMessagePolicy: File
       imagePullSecrets:
       - name: regcred
-#      dnsPolicy: ClusterFirst
-#      dnsConfig:
-#        options:
-#          - name: ndots
-#            value: "1"
+      dnsPolicy: ClusterFirst
+      dnsConfig:
+        options:
+          - name: ndots
+            value: "1"
       restartPolicy: Always
       schedulerName: default-scheduler
       securityContext: {}
