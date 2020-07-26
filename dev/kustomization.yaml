@@ -7,5 +7,5 @@ commonLabels:
 namespace: dev
 bases:
 - ../base/
-- secret_regcred.yaml
+#- secret_regcred.yaml
 - deploy_front.yaml
