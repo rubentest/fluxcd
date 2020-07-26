@@ -13,6 +13,7 @@ spec:
             - --memcached-hostname=memcached.flux
             - --memcached-service=
             - --ssh-keygen-dir=/var/fluxd/keygen
+            - --git-label=flux-dev
             - --git-branch=master
             - --git-path=dev
             - --git-user=flux
