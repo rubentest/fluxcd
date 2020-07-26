@@ -13,9 +13,9 @@ spec:
             - --memcached-hostname=memcached.flux
             - --memcached-service=
             - --ssh-keygen-dir=/var/fluxd/keygen
-            - --git-label=flux-dev
-            - --git-branch=master
-            - --git-path=dev
+            - --git-label=flux-dev  #label con la que poner el tag en git
+            - --git-branch=master    #rama de git a la que mirar
+            - --git-path=dev        #directorio al que mirar
             - --git-user=flux
             - --git-email=rubenpp@users.noreply.github.com
             - --git-url=git@gitlab.com:rubenpp/fluxcdkustomize.git
