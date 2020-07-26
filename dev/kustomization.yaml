@@ -11,7 +11,7 @@ commonLabels:
 namespace: dev
 bases:
 - ../base/
-- svc_postgresql.yaml
+- services_kusto.yaml
 - secret_regcred.yaml
 - deploy_front.yaml
 - deploy_boards.yaml
