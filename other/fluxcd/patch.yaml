@@ -19,5 +19,5 @@ spec:
             - --git-email=rubenpp@users.noreply.github.com
             - --git-url=git@gitlab.com:rubenpp/fluxcdkustomize.git
             - --git-poll-interval=1m00s
-            #- --k8s-allow-namespace=dev
-            #- --sync-garbage-collection
+            - --k8s-allow-namespace=dev
+            - --sync-garbage-collection
