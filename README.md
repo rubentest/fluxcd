@@ -1,5 +1,7 @@
 https://docs.fluxcd.io/en/latest/tutorials/get-started-kustomize/
 
+forked by : https://github.com/fluxcd/flux-kustomize-example
+
 clone the repo, go to repo and execute:
  ~/fluxcdkustomize/other$ kubectl apply -k fluxcd/
 
