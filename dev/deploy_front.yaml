@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: front
+  name: front
+spec:
+  selector:
+    matchLabels:
+      app: front
+  template:
+    metadata:
+      labels:
+        app: front
+    spec:
+      containers:
+      - name: front
+        image: registry-intl.eu-central-1.aliyuncs.com/mgoup/frontend:dev
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+          protocol: TCP
+        env:
+        - name: TZ
+          value: "Europe/Madrid"
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      imagePullSecrets:
+      - name: regcred
+#      dnsPolicy: ClusterFirst
+#      dnsConfig:
+#        options:
+#          - name: ndots
+#            value: "1"
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+#---
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  labels:
+#    app: front
+#  name: front
+#spec:
+#  ports:
+#  - port: 80
+#    protocol: TCP
+#    targetPort: 80
+#  selector:
+#    app: front
+#  sessionAffinity: None
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pro-web-api-v1
+  namespace: marketplace-v1
+  labels:
+    app: pro-web-api-v1
+spec:
+  selector:
+    app: pro-web-api-v1
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80

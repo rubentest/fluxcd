@@ -14,11 +14,10 @@ spec:
             - --memcached-service=
             - --ssh-keygen-dir=/var/fluxd/keygen
             - --git-branch=master
-            - --git-path=overlays/dev
+            - --git-path=dev
             - --git-user=flux
             - --git-email=rubenpp@users.noreply.github.com
-            - --git-url=git@gitlab.com:rubenpp/kustoflux.git
+            - --git-url=git@gitlab.com:rubenpp/fluxcdkustomize.git
             - --git-poll-interval=1m00s
-            - --manifest-generation=true
-            - --k8s-allow-namespace=dev
+            #- --k8s-allow-namespace=dev
             - --sync-garbage-collection
