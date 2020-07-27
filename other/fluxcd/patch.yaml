@@ -18,7 +18,7 @@ spec:
             - --git-path=dev        #directorio al que mirar
             - --git-user=flux
             - --git-email=rubenpp@users.noreply.github.com
-            - --git-url=git@gitlab.com:rubenpp/fluxcdkustomize.git
+            - --git-url=git@github.com:rubentest/fluxcd.git
             - --git-poll-interval=1m00s
             - --k8s-allow-namespace=dev
             - --sync-garbage-collection
