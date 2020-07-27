@@ -8,8 +8,10 @@ kind: Kustomization
 commonLabels:
   environment: dev
 
+#kustomize edit set image registry-intl.eu-central-1.aliyuncs.com/mgoup/boards_php=registry-intl.eu-central-1.aliyuncs.com/mgoup/boards_php:prd-26
+
 namespace: dev
-bases:
+resources:
 - ../base/
 - services_kusto.yaml
 - secret_regcred.yaml
@@ -19,3 +21,7 @@ bases:
 - deploy_notificator.yaml
 - deploy_panel.yaml
 - deploy_users.yaml
+images:
+- name: registry-intl.eu-central-1.aliyuncs.com/mgoup/boards_php
+  newName: registry-intl.eu-central-1.aliyuncs.com/mgoup/boards_php
+  newTag: prd-26
