@@ -22,6 +22,6 @@ resources:
 - deploy_panel.yaml
 - deploy_users.yaml
 images:
-- name: registry-intl.eu-central-1.aliyuncs.com/mgoup/boards_php
-  newName: registry-intl.eu-central-1.aliyuncs.com/mgoup/boards_php
+- name: registry-intl.eu-central-1.aliyuncs.com/mgoup/boards_nginx
+  newName: registry-intl.eu-central-1.aliyuncs.com/mgoup/boards_nginx
   newTag: prd-26
